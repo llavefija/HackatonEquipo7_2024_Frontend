@@ -66,7 +66,7 @@ La estructura actual del front es la siguiente:
 
 ```plaintext
 /
-├── STUDYBOARD-FRONTEND
+├── TEAM-7-FRONTEND
 │   ├── public
 │   ├── src/
 │   │    ├──api
