@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import image1 from "../assets/images/1.jpg";
+import banner from "../assets/images/bannerImg.jpg";
 import { Button } from "../components/Button";
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
         <img
           className="w-full h-full object-cover object-[50%_40%]"
           alt="Barcelona desde arriba"
-          src={image1}
+          src={banner}
         />
       </div>
       <div className="h-2/3 bg-slate-100">
