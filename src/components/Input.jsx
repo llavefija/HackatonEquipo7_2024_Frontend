@@ -1,4 +1,16 @@
-export const Input = ({ label, id, placeholder, value, onChange, type = "text", required = false, ...props }) => {
+export const Input = ({
+  label,
+  type,
+  id,
+  className,
+  placeholder,
+  value,
+  min,
+  max,
+  onChange,
+  required = false,
+  ...props
+}) => {
   return (
     <div>
       {label && (
