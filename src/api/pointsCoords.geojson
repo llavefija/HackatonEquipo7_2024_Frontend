@@ -1,0 +1,325 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 497,
+                "name": "Sant Maria del Mar",
+                "font": "TRÀNSIT",
+                "crowd_level": 9
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.166773,
+                    41.37485
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 5766,
+                "name": "Mercat de Sant Antoni",
+                "font": "TRÀNSIT",
+                "crowd_level": 4
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.160936,
+                    41.378803
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 6756,
+                "name": "Sagrada Familia",
+                "font": "TRÀNSIT",
+                "crowd_level": 6
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.174691,
+                    41.404484
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 7306,
+                "name": "Plaça de Joanic",
+                "font": "OCI",
+                "crowd_level": 1
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.162636,
+                    41.406
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 8401,
+                "name": "Parc de la Ciutadella",
+                "font": "OCI",
+                "crowd_level": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.185308,
+                    41.388973
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 9273,
+                "name": "La Boqueria",
+                "font": "TRÀNSIT",
+                "crowd_level": 8
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.172738,
+                    41.382785
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 10384,
+                "name": "Plaça Catalunya",
+                "font": "TRÀNSIT",
+                "crowd_level": 7
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.170091,
+                    41.387016
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 11457,
+                "name": "Montjuïc",
+                "font": "OCI",
+                "crowd_level": 6
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.166434,
+                    41.363534
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 12378,
+                "name": "Tibidabo",
+                "font": "OCI",
+                "crowd_level": 3
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.119219,
+                    41.422915
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 13421,
+                "name": "Parc Güell",
+                "font": "OCI",
+                "crowd_level": 7
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.152065,
+                    41.414494
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 14567,
+                "name": "Barceloneta Beach",
+                "font": "OCI",
+                "crowd_level": 9
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.194515,
+                    41.379867
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 15689,
+                "name": "Passeig de Gràcia",
+                "font": "TRÀNSIT",
+                "crowd_level": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.162979,
+                    41.394897
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 16745,
+                "name": "Casa Batlló",
+                "font": "TRÀNSIT",
+                "crowd_level": 4
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.165113,
+                    41.391746
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 17892,
+                "name": "Camp Nou",
+                "font": "OCI",
+                "crowd_level": 8
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.122821,
+                    41.380896
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 18902,
+                "name": "Poble Espanyol",
+                "font": "OCI",
+                "crowd_level": 6
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.148906,
+                    41.368726
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 19953,
+                "name": "Arc de Triomf",
+                "font": "TRÀNSIT",
+                "crowd_level": 4
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.180282,
+                    41.391294
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 20456,
+                "name": "Parc del Laberint d'Horta",
+                "font": "OCI",
+                "crowd_level": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.151659,
+                    41.437253
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 21578,
+                "name": "Font Màgica de Montjuïc",
+                "font": "OCI",
+                "crowd_level": 7
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.153806,
+                    41.371581
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 22645,
+                "name": "Bunkers del Carmel",
+                "font": "OCI",
+                "crowd_level": 4
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.159474,
+                    41.418428
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 23781,
+                "name": "Port Olímpic",
+                "font": "OCI",
+                "crowd_level": 6
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.197203,
+                    41.385555
+                ]
+            }
+        }
+    ]
+}
