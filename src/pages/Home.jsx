@@ -3,7 +3,6 @@ import image1 from "../assets/images/1.jpg";
 import { Button } from "../components/Button";
 
 const Home = () => {
-  
   const navigate = useNavigate();
   const handleButtonClick = () => {
     navigate("map");
@@ -24,11 +23,16 @@ const Home = () => {
         </h1>
         <div className="w-2/3 text-center mx-auto text-gray-600">
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
-            tenetur, magnam assumenda, et laboriosam adipisci iusto omnis ipsum,
-            repellendus facilis nisi quam atque odit at voluptatibus itaque
-            dolorum. Enim, eum.
+            ¡Imagina un viaje donde cada destino es tuyo! Con CrowdMap, olvídate
+            de las multitudes y descubre una manera más tranquila de explorar
+            Barcelona. Nuestra aplicación te ayuda a planificar tus aventuras
+            evitando los grandes conglomerciones de gente, permitiéndote
+            disfrutar de los lugares con más espacio, más calma y más
+            autenticidad. Encuentra rutas tranquilas, sitios escondidos y
+            experiencias que te conectan con la esencia de cada lugar, sin
+            agobios ni colas interminables.
           </p>
+          <p>Viaja a tu ritmo, descubre más y hazlo sin prisas.</p>
           <Button
             content={"Comienza tu viaje"}
             handleClick={handleButtonClick}
