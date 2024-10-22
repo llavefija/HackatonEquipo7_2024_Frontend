@@ -1,28 +1,31 @@
-/* eslint-disable react/prop-types */
+import { getCurrentDateTime } from "../utils/getCurrentDateTime";
+import { Button } from "./Button";
+import Input from "./Input";
 
-const MapFormComponent = ({ dateTime, setDateTime }) => {
+const MapFormComponent = ({ dateTime, setDateTime, onSubmit }) => {
     const handleSubmit = (event) => {
         event.preventDefault(); 
-        console.log("Selected Date and Time:", dateTime); 
+        onSubmit(); 
     };
 
     const handleChange = (event) => {
-        setDateTime(event.target.value);
+        setDateTime(event.target.value);  
     };
 
+    const minDateTime = getCurrentDateTime();
+
     return (
-        <form className="absolute z-20 top-0 left-1/2" onSubmit={handleSubmit}>
-            <input 
+        <form className="absolute z-20 top-0 left-1/2 transform -translate-x-1/2 flex items-center space-x-4" onSubmit={handleSubmit}>
+            <Input 
                 type="datetime-local" 
                 id="start" 
                 name="trip-start" 
                 value={dateTime} 
-                min="2018-01-01T00:00" 
-                max="2018-12-31T23:59" 
-                className="absolute z-20 top-0 left-1/2" 
+                min={minDateTime} 
+                max="2027-12-31T23:59" 
                 onChange={handleChange} 
             />
-            <button type="submit" className="absolute z-20 top-10 left-1/2">Submit</button>
+            <Button type="submit" content="Enviar"/>
         </form>
     );
 };
