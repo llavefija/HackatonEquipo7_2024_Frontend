@@ -9,7 +9,7 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col h-full w-full bg-slate-100">
       <div className="w-full h-[33vh] overflow-hidden">
         <img
           className="w-full h-full object-cover object-[50%_40%]"
@@ -17,7 +17,7 @@ const Home = () => {
           src={image1}
         />
       </div>
-      <div className="h-2/3">
+      <div className="h-2/3 bg-slate-100">
         <h1 className="text-3xl text-center font-semibold m-10 text-gray-800">
           Bienvenido a CrowdMap
         </h1>
