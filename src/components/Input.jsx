@@ -9,10 +9,14 @@ export const Input = ({ label, id, placeholder, value, onChange, type = "text", 
       <input
         type={type}
         id={id}
-        className="bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:outline-none focus:border-2 focus:border-accent block w-full p-2.5"
+        className={`bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:outline-none focus:border-2 focus:border-accent block w-full p-2.5${
+          className ? " " + className : ""
+        }`}
         placeholder={placeholder}
         value={value}
-        onChange={onChange}
+        min={min}
+        max={max}
+        onChange={handleChange}
         required={required}
         {...props}
       />
