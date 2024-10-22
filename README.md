@@ -3,7 +3,7 @@
 ## Índice
 
 - [Proyecto 📝](#proyecto-)
-- [Diseño](#diseño-)
+- [Diseño 🖍](#diseño-)
 - [Instalación 🛠️](#installation-)
 - [Estructura del proyecto 📐](#estructura-del-proyecto-)
 - [Tecnologías](#tecnologias-)
@@ -20,7 +20,7 @@ Viaja a tu ritmo, descubre más y hazlo sin prisas.
 
 Es un proyecto full-stack, [aquí está el repositorio del back](https://github.com/llavefija/HackatonEquipo7_2024_Backend), desarrollado por el equipo Backend y Data.
 
-### Diseño
+### Diseño 🖍
 
 El diseño de la interfaz fue generado en un primer momento en Figma, donde se delimitaron en primera instancia los elementos más atómicos, para ir construyendo componente a componente el diseño completo de la aplicación.
 
@@ -55,13 +55,13 @@ La estructura actual del front es la siguiente:
 │   ├── src/
 │   │    ├── components
 │   │    │     ├── Button
-│   │    │     ├── Carrousel
-│   │    │     ├── choosePostIt
 │   │    │     ├── Footer
 │   │    │     ├── HeatMap
 │   │    │     ├── Input
 │   │    │     ├── MapFormComponent
 │   │    │     └── NavBar
+│   │    ├──data
+│   │    │     └──  terme-municipal.geojson
 │   │    ├──hooks
 │   │    │     └──  useFetch.jsx
 │   │    ├──layout
@@ -85,6 +85,7 @@ La estructura actual del front es la siguiente:
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── README.md
+│   ├── tailwind.config.js
 └── └── vite.config.js
 ```
 
