@@ -22,8 +22,6 @@ export const fetchMapData = async (fecha, hora) => {
                 },
             });
         }
-
-        console.log("response", response);
         return {
             type: "FeatureCollection",
             features: response.data
