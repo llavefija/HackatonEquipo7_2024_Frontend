@@ -67,7 +67,12 @@ La estructura actual del front es la siguiente:
 ```plaintext
 /
 ├── STUDYBOARD-FRONTEND
+│   ├── public
 │   ├── src/
+│   │    ├──api
+│   │    │     ├── apiUrls.jsx
+│   │    │     └── pointsCoords.geojson
+│   │    ├── assets
 │   │    ├── components
 │   │    │     ├── Button
 │   │    │     ├── Footer
@@ -87,12 +92,16 @@ La estructura actual del front es la siguiente:
 │   │    │      └── MapPage
 │   │    ├──router
 │   │    │    └── router.jsx
+│   │    ├── service
+│   │    │   └── mapService.jsx
 │   │    ├── utils
+│   │    │   ├── formatDateTime
 │   │    │   └── getCurrentDateTime.jsx
 │   │    ├── config.js
 │   │    ├── index.scss
 │   │    ├── main.jsx
-│   │    └── setupTests.js
+│   │    ├── tests
+│   │    │   └── setupTests.jsx
 │   ├── .env
 │   ├── .gitignore
 │   ├── eslint.config.js
