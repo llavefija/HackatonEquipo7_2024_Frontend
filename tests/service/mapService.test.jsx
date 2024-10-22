@@ -1,7 +1,7 @@
 import { describe, it, expect, afterEach, vi } from 'vitest';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import { fetchMapData } from '../../src/service/mapService'; // Modifica il percorso con quello corretto
+import { fetchMapData } from '../../src/service/mapService';
 
 const mockAxios = new MockAdapter(axios);
 
