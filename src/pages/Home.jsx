@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import image1 from "../assets/images/1.jpg";
 import { Button } from "../components/Button";
 
 const Home = () => {
+  
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("map");
+  };
+
   return (
     <div className="flex flex-col h-full w-full">
       <div className="w-full h-[33vh] overflow-hidden">
@@ -22,7 +29,10 @@ const Home = () => {
             repellendus facilis nisi quam atque odit at voluptatibus itaque
             dolorum. Enim, eum.
           </p>
-          <Button content={"Comienza tu viaje"}></Button>
+          <Button
+            content={"Comienza tu viaje"}
+            handleClick={handleButtonClick}
+          ></Button>
         </div>
       </div>
     </div>
