@@ -65,14 +65,14 @@ const HeatMap = () => {
                         'interpolate',
                         ['linear'],
                         ['heatmap-density'],
-                        0, 'rgba(0,255,0,0)',       
-                        1/9, 'rgba(0,255,0,0.2)',    
-                        2/9, 'rgba(173,255,47,0.4)', 
-                        3/9, 'rgba(255,255,0,0.6)',  
-                        4/9, 'rgba(255,204,0,0.7)',  
-                        5/9, 'rgba(255,153,51,0.8)', 
-                        6/9, 'rgba(255,102,0,0.9)',  
-                        7/9, 'rgba(255,51,0,1)',    
+                        0, 'rgba(0,255,0,0)',
+                        1 / 9, 'rgba(0,255,0,0.2)',
+                        2 / 9, 'rgba(173,255,47,0.4)',
+                        3 / 9, 'rgba(255,255,0,0.6)',
+                        4 / 9, 'rgba(255,204,0,0.7)',
+                        5 / 9, 'rgba(255,153,51,0.8)',
+                        6 / 9, 'rgba(255,102,0,0.9)',
+                        7 / 9, 'rgba(255,51,0,1)',
                         1, 'rgb(255,0,0)'
                     ],
 
@@ -94,6 +94,7 @@ const HeatMap = () => {
                     },
                 },
             })
+
             // Aggiungi i confini di Barcellona
             mapRef.current.addLayer({
                 id: 'bcn_boundaries',
@@ -110,6 +111,26 @@ const HeatMap = () => {
             });
         });
 
+        mapRef.current.on('click', (evt) => {
+            const features = mapRef.current.queryRenderedFeatures(evt.point, {
+                layers: ['barcelona-heatmap'],
+            })
+            if (!features.length) {
+                return
+            }
+            const feature = features[0]
+
+            const coordinates = feature.geometry.coordinates.slice()
+            const description = `<h3 style="margin: 0; font-size: 14px; color: black; padding: 4px;"
+        >${feature.properties.name}</h3>
+        <button style="margin: 0; color: black; padding: 2px, 4px; border: 1px solid black;">Detaiils</button>
+        `
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(mapRef.current);
+        })
+
         return () => {
             mapRef.current.remove()
         }
@@ -118,10 +139,12 @@ const HeatMap = () => {
 
 
     return (
-        <>
-            <div id='map-container' ref={mapContainerRef} />
-        </>
+
+        <div className="absolute bg-gray-300 h-full w-full" ref={mapContainerRef} />
+
     )
 }
 
 export default HeatMap
+
+
