@@ -29,7 +29,7 @@ const MapPage = () => {
     }
 
     return (
-        <div className="relative top-0 left-0 right-0 bottom-0 h-[80vh]">
+        <div className="relative top-0 left-0 right-0 bottom-0 h-full">
             <HeatMap data={data} />
             <MapFormComponent dateTime={dateTime} setDateTime={setDateTime} />
 

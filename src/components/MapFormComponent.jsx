@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { getCurrentDateTime } from "../utils/getCurrentDateTime";
+
 const MapFormComponent = ({ dateTime, setDateTime }) => {
     const handleSubmit = (event) => {
         event.preventDefault(); 
@@ -10,6 +12,8 @@ const MapFormComponent = ({ dateTime, setDateTime }) => {
         setDateTime(event.target.value);
     };
 
+    const minDateTime = getCurrentDateTime();
+
     return (
         <form className="absolute z-20 top-0 left-1/2" onSubmit={handleSubmit}>
             <input 
@@ -17,7 +21,7 @@ const MapFormComponent = ({ dateTime, setDateTime }) => {
                 id="start" 
                 name="trip-start" 
                 value={dateTime} 
-                min="2024-01-01T00:00" 
+                min={minDateTime} 
                 max="2027-12-31T23:59" 
                 className="absolute z-20 top-0 left-1/2" 
                 onChange={handleChange} 

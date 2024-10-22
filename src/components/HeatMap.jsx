@@ -1,10 +1,9 @@
-/* eslint-disable react/prop-types */
 import { useRef, useEffect } from 'react'
 import mapboxgl from 'mapbox-gl'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const HeatMap = ({ data }) => {
+const HeatMap = () => {
     const apiKey = import.meta.env.VITE_API_KEY
     const mapRef = useRef()
     const mapContainerRef = useRef()
@@ -40,7 +39,6 @@ const HeatMap = ({ data }) => {
                 source: 'crowd_data',
                 maxzoom: 15,
                 paint: {
-                    // Asigna el peso de cada punto según la propiedad "00"
                     'heatmap-weight': [
                         'interpolate',
                         ['linear'],
@@ -72,7 +70,6 @@ const HeatMap = ({ data }) => {
                         1, 'rgb(255,0,0)'
                     ],
 
-                    // Controla el radio de los puntos de calor
                     'heatmap-radius': {
                         stops: [
                             [11, 50],
@@ -99,7 +96,7 @@ const HeatMap = ({ data }) => {
                     'line-cap': 'round',
                 },
                 paint: {
-                    'line-color': '#FF0000',
+                    'line-color': '#01D098',
                     'line-width': 3,
                 },
             });
@@ -129,7 +126,7 @@ const HeatMap = ({ data }) => {
         return () => {
             mapRef.current.remove()
         }
-    }, []);
+    }, [apiKey]);
 
 
 
