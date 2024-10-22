@@ -1,5 +1,4 @@
-import bcn from "../bcn.png";
-import "../navbar.css";
+import crowdmap from "../assets/images/Crowdmap_Logo.png";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -10,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-accent">
       <button onClick={handleClick}>
-        <img src={bcn} className="logo" alt="Barcelona" />
+        <img src={crowdmap} className="w-[60px]" alt="Barcelona" />
         <h1 className="text-xl text-white">
           <strong>CrowdMap</strong>
         </h1>
