@@ -1,0 +1,59 @@
+{
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "properties": {
+                    "id": 497,
+                    "name": "Sant Maria del Mar",
+                    "font": "TRÀNSIT",
+                    "crowd_level": 9
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.166773, 41.37485]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "id": 5766,
+                    "name": "Mercat de Sant Antoni",
+                    "font": "TRÀNSIT",
+                    "crowd_level": 4
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.160936, 41.378803]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "id": 6756,
+                    "name": "Sagrada Familia",
+                    "font": "TRÀNSIT",
+                    "crowd_level": 6
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.174691, 41.404484]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "id": 7306,
+                    "name": "Plaça de Joanic",
+                    "font": "OCI",
+                    "crowd_level": 1
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.162636, 41.406]
+                }
+            }
+        ]
+    }
+
+
