@@ -3,7 +3,7 @@
 ## Índice
 
 - [Proyecto 📝](#proyecto-)
-- [Demo 🚀](#demo-)
+- [Screenshots 🚀](#screenshots-)
 - [Diseño 🖍](#diseño-)
 - [Gestión del Proyecto 🗂](#gestión-del-proyecto-)
 - [Instalación 🛠️](#installation-)
@@ -21,7 +21,7 @@ Viaja a tu ritmo, descubre más y hazlo sin prisas.
 
 Es un proyecto full-stack, [aquí está el repositorio del back](https://github.com/llavefija/HackatonEquipo7_2024_Backend), desarrollado por el equipo Backend y Data.
 
-## Demo 🚀
+## Screenshots 🚀
 
 #### Home page
 
@@ -131,7 +131,7 @@ npm run dev
 ```
 
 > [!IMPORTANT]
-> La conexión mediante Frontend y Backend se ha realizado mediante un Tunnel ![Ngrok][https://ngrok.com/]
+> La conexión entre Frontend y Backend se ha realizado mediante un Tunnel [Ngrok](https://ngrok.com/)
 
 Abre el enlace que aparece con tu puerto local.
 
