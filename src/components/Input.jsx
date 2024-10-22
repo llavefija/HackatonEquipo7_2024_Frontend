@@ -1,4 +1,4 @@
-export const Input = ({
+const Input = ({
   label,
   type,
   id,
@@ -21,17 +21,20 @@ export const Input = ({
       <input
         type={type}
         id={id}
-        className={`bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:outline-none focus:border-2 focus:border-accent block w-full p-2.5${
+        className={`bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:outline-none focus:border-2 focus:border-accent p-2.5${
           className ? " " + className : ""
         }`}
         placeholder={placeholder}
         value={value}
         min={min}
         max={max}
-        onChange={handleChange}
+        onChange={onChange}
         required={required}
         {...props}
       />
     </div>
   );
 };
+
+
+export default Input;
