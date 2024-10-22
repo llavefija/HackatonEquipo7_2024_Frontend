@@ -1,17 +1,22 @@
 import bcn from "../bcn.png";
-import "../navbar.css"
-import { Link } from "react-router-dom";
+import "../navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/");
+  };
   return (
-      <div className="navbar bg-accent">
-       <Link to="/home">
+    <div className="navbar bg-accent">
+      <button onClick={handleClick}>
         <img src={bcn} className="logo" alt="Barcelona" />
-        <h1 className="text-xl text-white"> <strong>CrowdMap</strong></h1>
-       </Link> 
-      </div>
-  )
-}
+        <h1 className="text-xl text-white">
+          <strong>CrowdMap</strong>
+        </h1>
+      </button>
+    </div>
+  );
+};
 
 export default Navbar;
