@@ -17,8 +17,8 @@ const MapFormComponent = ({ dateTime, setDateTime }) => {
                 id="start" 
                 name="trip-start" 
                 value={dateTime} 
-                min="2018-01-01T00:00" 
-                max="2018-12-31T23:59" 
+                min="2024-01-01T00:00" 
+                max="2027-12-31T23:59" 
                 className="absolute z-20 top-0 left-1/2" 
                 onChange={handleChange} 
             />

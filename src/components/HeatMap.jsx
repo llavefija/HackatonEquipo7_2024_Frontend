@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import { useRef, useEffect } from 'react'
 import mapboxgl from 'mapbox-gl'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const HeatMap = () => {
-
+const HeatMap = ({ data }) => {
+    const apiKey = import.meta.env.VITE_API_KEY
     const mapRef = useRef()
     const mapContainerRef = useRef()
 
     useEffect(() => {
-        mapboxgl.accessToken = 'pk.eyJ1IjoiaXRhbGlhLWNvb2tpZS1tb25zdGVyIiwiYSI6ImNtMmtiMmV0ODBqYnYyanNjZ3A1YXgzdXEifQ.QiNr88hKBBc-cmv1ey4JmA'
+        mapboxgl.accessToken = apiKey
         mapRef.current = new mapboxgl.Map({
             container: mapContainerRef.current,
             center: [
@@ -44,15 +45,11 @@ const HeatMap = () => {
                         'interpolate',
                         ['linear'],
                         ['get', 'crowd_level'],
-                        // 0,
-                        // 0,
-                        // 9,
-                        // 1,
-                        1, 0,  // Affollamento minimo, intensità minima
+        
+                        1, 0,  
                         9, 1
                     ],
 
-                    // Controla la intensidad del heatmap en diferentes niveles de zoom
                     'heatmap-intensity': {
                         stops: [
                             [11, 1],
@@ -60,7 +57,6 @@ const HeatMap = () => {
                         ],
                     },
 
-                    // Interpolación de colores según la densidad del heatmap
                     'heatmap-color': [
                         'interpolate',
                         ['linear'],
@@ -84,7 +80,6 @@ const HeatMap = () => {
                         ],
                     },
 
-                    // Controla la opacidad del heatmap
                     'heatmap-opacity': {
                         default: 1,
                         stops: [
@@ -95,7 +90,6 @@ const HeatMap = () => {
                 },
             })
 
-            // Aggiungi i confini di Barcellona
             mapRef.current.addLayer({
                 id: 'bcn_boundaries',
                 type: 'line',
@@ -123,7 +117,8 @@ const HeatMap = () => {
             const coordinates = feature.geometry.coordinates.slice()
             const description = `<h3 style="margin: 0; font-size: 14px; color: black; padding: 4px;"
         >${feature.properties.name}</h3>
-        <button style="margin: 0; color: black; padding: 2px, 4px; border: 1px solid black;">Detaiils</button>
+        <button style="margin: 0; color: black; padding: 2px, 4px; border: 1px solid black;">
+        <a href="/map/${feature.properties.id}">Detaiils</a></button>
         `
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
