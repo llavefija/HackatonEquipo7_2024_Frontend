@@ -1,17 +1,21 @@
-import bcn from "../bcn.png";
-import "../navbar.css"
-import { Link } from "react-router-dom";
+import crowdmap from "../assets/images/Crowdmap_Logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/");
+  };
   return (
     <div className="navbar bg-accent">
-      <Link to="/home">
-        <img src={bcn} className="logo" alt="Barcelona" />
-        <h1 className="text-xl text-white"> <strong>CrowdMap</strong></h1>
-      </Link>
+      <button onClick={handleClick}>
+        <img src={crowdmap} className="w-[60px]" alt="Barcelona" />
+        <h1 className="text-xl text-white">
+          <strong>CrowdMap</strong>
+        </h1>
+      </button>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;

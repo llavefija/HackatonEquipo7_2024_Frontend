@@ -3,7 +3,7 @@ import mapboxgl from 'mapbox-gl'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const HeatMap = () => {
+const HeatMap = ({ data }) => {
     const apiKey = import.meta.env.VITE_API_KEY
     const mapRef = useRef()
     const mapContainerRef = useRef()
@@ -31,7 +31,7 @@ const HeatMap = () => {
 
             mapRef.current.addSource('crowd_data', {
                 type: 'geojson',
-                data: '/src/api/pointsCoords.geojson',
+                data: data,
             });
             mapRef.current.addLayer({
                 id: 'barcelona-heatmap',
@@ -112,10 +112,12 @@ const HeatMap = () => {
             const feature = features[0]
 
             const coordinates = feature.geometry.coordinates.slice()
-            const description = `<h3 style="margin: 0; font-size: 14px; color: black; padding: 4px;"
-        >${feature.properties.name}</h3>
-        <button style="margin: 0; color: black; padding: 2px, 4px; border: 1px solid black;">
-        <a href="/map/${feature.properties.id}">Detaiils</a></button>
+            const description = `<div style="display:flex; flex-direction: column; align-items: center; justify-items: center; text-align: center; gap: 16px; font-size: 1.5rem;">
+                <h3 style="margin: 0; color: black; padding: 4px;"
+                >${feature.properties.name}</h3>
+                <button style="display: block;border-radius: 10px; margin: 0; color: white; padding: 15px; background-color: #01D098">
+                <a href="/map/${feature.properties.id}">Detaiils</a></button>
+            </div>
         `
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
@@ -126,7 +128,7 @@ const HeatMap = () => {
         return () => {
             mapRef.current.remove()
         }
-    }, [apiKey]);
+    }, [apiKey, data]);
 
 
 
